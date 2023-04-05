@@ -13,8 +13,13 @@ opinions = page.select("div.js_product-review")
 print(len(opinions))
 print(type(opinions))
 
+all_opinions = []
+
 for opinion in opinions:
     print(opinion["data-entry-id"])
+    single_opinion = {
+        
+    }
 
 # print(response.status_code)
 
