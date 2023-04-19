@@ -11,7 +11,7 @@ def get_element(ancestor, selector = None, attribute = None, return_list = False
         if attribute:
             return ancestor.select_one(selector)[attribute].strip()
         return ancestor.select_one(selector).text.strip()
-    except AttributeError:
+    except (AttributeError, TypeError):
         return None
 
 selectors = {
@@ -29,10 +29,12 @@ selectors = {
     "cons": ["div.review-feature__col:has(> div.review-feature__title--negatives) > div.review-feature__item",None, True]
 }
 
-# product_code = input("Podaj kod produktu: ")
-product_code = "96685108"
+product_code = input("Podaj kod produktu: ")
+# product_code = "96685108"
+# product_code = "138536499"
 all_opinions = []
 url = f"https://www.ceneo.pl/{product_code}#tab=reviews"
+
 while(url):
     print(url)
     response = requests.get(url)
