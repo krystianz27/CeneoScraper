@@ -1,6 +1,6 @@
 # CeneoScraperS11
 
-## Selectors CSS opinion in Ceneo.pl
+## Selectors CSS opinion on Ceneo.pl
 
 | składowa | nazwa | selektor |
 | --- | --- | --- |
@@ -21,3 +21,8 @@
 ## Used libraries
 - Requests
 - BeautifulSoup4
+- Json
+- Os
+- Pandas
+- Numpy
+- Matplotlib
